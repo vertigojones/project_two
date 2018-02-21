@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
@@ -12,8 +13,8 @@ const users = require('./routes/users')
 const app = express()
 
 // connect mongoose to your mongo database
+const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGODB_URI)
-
 const db = mongoose.connection
 
 // console log when successfully connected
@@ -56,6 +57,11 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500)
   res.render('error')
+})
+
+//APP LISTENING set app listening on 4000 for postman application
+app.listen(4000, () => {
+  console.log('Meat is sizzling on port 4000')
 })
 
 module.exports = app

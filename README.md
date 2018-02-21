@@ -4,8 +4,8 @@ Our old pal and classmate, Murph Potts, is a protein lover from The South. As of
 
 GitHub: https://github.com/vertigojones/project_two
 
-Heroku:
+Heroku: https://dashboard.heroku.com/apps/fast-bayou-89127
 
-Wireframe:
+Wireframe: https://i.imgur.com/h7Y6k8W.jpg?1
 
-Data Modelling: 
+Data Modelling: https://i.imgur.com/1UblMW4.jpg?1
