@@ -60,8 +60,8 @@ app.use(function(err, req, res, next) {
 })
 
 // app listening on 4000 for postman application
-app.listen(4000, () => {
-  console.log('Meat is sizzling on port 4000')
-})
+// app.listen(4000, () => {
+//   console.log('Meat is sizzling on port 4000')
+// })
 
 module.exports = app
