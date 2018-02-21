@@ -7,8 +7,8 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
-const index = require('./routes/index')
-const users = require('./routes/users')
+const index = require('./models/item')
+const users = require('./models/user')
 
 const app = express()
 
@@ -60,8 +60,8 @@ app.use(function(err, req, res, next) {
 })
 
 // app listening on 4000 for postman application
-// app.listen(4000, () => {
-//   console.log('Meat is sizzling on port 4000')
-// })
+app.listen(4000, () => {
+console.log('Meat is sizzling on port 4000')
+})
 
 module.exports = app
