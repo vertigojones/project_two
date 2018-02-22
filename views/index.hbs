@@ -1,2 +1,99 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/stylesheets/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <title>Murph's Meat-Up</title>
+
+</head>
+
+<body>
+    <h1>Murph's Meat-Up™</h1>
+
+    <!-- Navbar goes here -->
+
+    <!-- Page Layout here -->
+    <div class="row">
+
+        <div class="col s12 m4 l3">
+            <!-- Note that "m4 l3" was added -->
+            <!-- Grey navigation panel
+
+              This content will be:
+          3-columns-wide on large screens,
+          4-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+
+        </div>
+
+        <div class="col s12 m7">
+            <h2 class="header"></h2>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="images/bbq.jpg">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>Here is a picture from the last Murph's Meat-Up™. As you can see, we take the tradional art of grilling,
+                            and place it firmly in the good ol' Southern USA. As we say down here in these parts, "One man's
+                            junk is another man's source of dinner. Oh, and cold beer." If you would love to add your name
+                            to the next Meat-Up™, than click the link below and add yourself to the list!</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Sign me up NOW!!!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Note that "m8 l9" was added -->
+        <!-- Teal page content
+
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+
+    </div>
+
+    </div>
+
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th>Name:</th>
+                <th>Gender:</th>
+                <th>Meat:</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                {{#each companies}}
+                <li>
+                    <a href="/user/{{_id}}">{{name}}</a>
+                </li>
+                {{/each}}
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
