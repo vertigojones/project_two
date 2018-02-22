@@ -81,9 +81,15 @@
 
         <tbody>
             <tr>
-                {{#each companies}}
+                {{#each attendee}}
                 <li>
                     <a href="/user/{{_id}}">{{name}}</a>
+                </li>
+                <li>
+                    <a href="/user/{{_id}}">{{gender}}</a>
+                </li>
+                <li>
+                    <a href="/user/{{_id}}">{{meat}}</a>
                 </li>
                 {{/each}}
             </tr>
