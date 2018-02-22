@@ -1,9 +1,7 @@
-const express = require('express');
-const router = express.Router();
+const mongoose = require('mongoose')
+const Schema = require('../db/schema')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// convert schema into mongoose model and export
+const MeatUser = mongoose.model('meatUser', Schema)
 
-module.exports = router;
+module.exports = MeatUser
