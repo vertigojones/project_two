@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     MeatUser.find().then((attendee) => {
         // send all meat users to homepage
         console.log('working!')
-        res.render('views/index', {
+        res.render('user/index', {
             attendee: attendee
         })
     })
@@ -52,3 +52,4 @@ router.get('/:id', (req, res) => {
     })
 })
 
+module.exports = router
