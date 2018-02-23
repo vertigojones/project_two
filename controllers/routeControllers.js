@@ -37,7 +37,7 @@ router.post('/', (req, res) => {
         console.log(savedMeatUser)
         // redirect to the new meat user page
         res.redirect(`/users/${savedMeatUser._id}`)
-    }).catch((err)=> {
+    }).catch((err) => {
         console.log(err)
     })
 })
@@ -52,6 +52,15 @@ router.get('/:id', (req, res) => {
         res.render('user/show', {
             attendee: attendee
         })
+    })
+})
+
+// DELETE
+router.delete('/:id', (req, res) => {
+
+    // use the params id to find and remove the meat user
+    MeatUser.findByIdAndRemove(req.params.id).then(() => {
+        res.redirect(`/users`)
     })
 })
 

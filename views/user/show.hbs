@@ -39,9 +39,13 @@
     </table>
 
 
-    <a href="/companies/{{companyId}}/sodas/{{soda._id}}/edit">Edit {{soda.name}}</a>
+    <a href="/users/{{MeatUserId}}/edit">Edit {{soda.name}}</a>
 
-    <form method="POST" action="/companies/{{companyId}}/sodas/{{soda._id}}?_method=DELETE">
-        <button type="submit">Delete This Soda</button>
+    <form method="POST" action="/users/{{attendee.id}}?_method=DELETE">
+        <div class="center-align">
+            <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action">Delete {{attendee.name}}
+                <i class="material-icons left">clear</i>
+            </button>
+        </div>
     </form>
 </body>
