@@ -9,7 +9,7 @@
         <!-- Page Content goes here -->
 
         <div class="row">
-            <form method="POST" action="/users{{attendee.id}}?_method=PATCH" class="col s12 white">
+            <form method="POST" class="col s12 white" action="/users/{{attendee.id}}?_method=PATCH">
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="image-url" type="text" class="validate" value="{{attendee.image}}" name="image-url">
@@ -65,6 +65,9 @@
                         <label class="active" for="disabled">Side</label>
                     </div>
                 </div>
+
+                </br>
+
                 <div class="center-align">
                     <button class="btn waves-effect waves-light amber lighten-2" type="submit" name="action">I'm changing my meat!
                         <i class="material-icons left">restaurant</i>

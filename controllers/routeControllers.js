@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
 
     // save the new meat user
     newMeatUser.save().then((savedMeatUser) => {
-        console.log(savedMeatUser)
+        
         // redirect to the new meat user page
         res.redirect(`/users/${savedMeatUser._id}`)
     }).catch((err) => {
@@ -82,15 +82,15 @@ router.patch('/:id', (req, res) => {
     // use the route params and form data to update the meat user
     MeatUser.findByIdAndUpdate(req.params.id, {
         image: req.body.image,
-            name: req.body.name,
-            gender: req.body.gender,
-            age: req.body.age,
-            hobbies: req.body.hobbies,
-            meat: req.body.meat,
-            preparation: req.body.preparation,
-            side: req.body.side
-    
-        }, { new: true }).then((updatedMeatUser) => {
+        name: req.body.name,
+        gender: req.body.gender,
+        age: req.body.age,
+        hobbies: req.body.hobbies,
+        meat: req.body.meat,
+        preparation: req.body.preparation,
+        side: req.body.side
+
+    }, { new: true }).then((updatedMeatUser) => {
 
         // redirect to the show page once it successfully updates
         res.redirect(`/users/${updatedMeatUser._id}`)
