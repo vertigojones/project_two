@@ -5,19 +5,74 @@
 
     <h2>Edit {{attendee.name}}</h2>
 
-    <form method="POST" action="/companies/{{id}}?_method=PATCH">
-        <div>
-            <label for="name">Name of Company</label>
-            <input type="text" name="name" value="{{company.name}}">
+    <div class="container">
+        <!-- Page Content goes here -->
+
+        <div class="row">
+            <form method="POST" action="/users{{attendee.id}}?_method=PATCH" class="col s12 white">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="image-url" type="text" class="validate" value="{{attendee.image}}" name="image-url">
+                        <label class="active" for="image-url">Image URL</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="name" type="text" class="validate" value="{{attendee.name}}" name="name">
+                        <label class="active" for="name">Name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="gender" type="text" class="validate" value="{{attendee.gender}}" name="gender">
+                        <label class="active" for="gender">Gender</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="age" type="text" class="validate" value="{{attendee.age}}" name="age">
+                        <label class="active" for="age">Age</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="hobbies" type="text" class="validate" value="{{attendee.hobbies}}" name="hobbies">
+                        <label class="active" for="hobbies">Hobbies</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="meat" type="text" class="validate" value="{{attendee.meat}}" name="meat">
+                        <label class="active" for="meat">MEAT</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="preparation" type="text" class="validate" value="{{attendee.preparation}}" name="preparation">
+                        <label class="active" for="preparation">Preparation</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled id="side" type="text" class="validate" value="{{attendee.side}}" name="side">
+                        <label class="active" for="disabled">Side</label>
+                    </div>
+                </div>
+                <div class="center-align">
+                    <button class="btn waves-effect waves-light amber lighten-2" type="submit" name="action">I'm changing my meat!
+                        <i class="material-icons left">restaurant</i>
+                    </button>
+                </div>
+                </br>
+
+            </form>
         </div>
-        <div>
-            <label for="location">Location</label>
-            <input type="text" name="location" value="{{company.location}}">
-        </div>
-
-        <button type="submit">Add Company</button>
-    </form>
-
-    <a href="/companies/{{id}}">Back to {{company.name}}</a>
-
+    </div>
 </body>

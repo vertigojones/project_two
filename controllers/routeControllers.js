@@ -70,7 +70,8 @@ router.get('/:id/edit', (req, res) => {
             hobbies: req.body.hobbies,
             meat: req.body.meat,
             preparation: req.body.preparation,
-            side: req.body.side
+            side: req.body.side,
+            attendee: attendee
         })
     })
 })
