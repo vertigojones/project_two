@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
 
 const meatUserSchema = new Schema ({
+    image: String,
     name: String,
     gender: String,
     age: Number,

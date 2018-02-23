@@ -1,22 +1,18 @@
 h1 {
-  color: black;
-  text-align: center;
-}
-
-header {
-  background-image: url("images/flag.jpg");
-  padding: 20px 20px;
-  width: 100vw;
-}
-
-table {
-  margin: 40px 20px;
-  padding: 20px;
-}
-
-.card-image {
-  height: 500px;
-}
-
-
-
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+  }
+  
+  header {
+    background-image: url("../images/flag.jpg");
+    padding: 20px 20px;
+    width: 100vw;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+  
+  .card-image {
+    height: 500px;
+  }
+  
