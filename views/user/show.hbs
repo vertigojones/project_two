@@ -1,19 +1,47 @@
-<header>
-    <h1>Meat-Up™ Attendees</h1>
-</header>
+<body>
+    <header>
+        <h1>Meat-Up™ Attendees</h1>
+    </header>
 
-<h1>{{attendee.name}}</h1>
+    <h2>{{attendee.name}}</h2>
 
-<img src="{{attendee.image}}">
-<p>Gender: {{attendee.gender}}</p>
-<p>Age: {{attendee.age}}</p>
-<p>Hobbies: {{attendee.hobbies}}</p>
-<p>Meat: {{attendee.meat}}</p>
-<p>Preparation: {{attendee.preparation}}</p>
-<p>Side: {{attendee.side}}</p>
+    <img class="profile" src="{{attendee.image}}">
 
-<a href="/companies/{{companyId}}/sodas/{{soda._id}}/edit">Edit {{soda.name}}</a>
+    <table class="centred white">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
 
-<form method="POST" action="/companies/{{companyId}}/sodas/{{soda._id}}?_method=DELETE">
-    <button type="submit">Delete This Soda</button>
-</form>
+        <tbody>
+            <tr>
+                <td class="center">Gender: {{attendee.gender}}</td>
+            </tr>
+            <tr>
+                <td class="center">Age: {{attendee.age}}</td>
+            </tr>
+            <tr>
+                <td class="center">Hobbies: {{attendee.hobbies}}</td>
+            </tr>
+            <tr>
+                <td class="center">Meat: {{attendee.meat}}</td>
+            </tr>
+            <tr>
+                <td class="center">Preparation: {{attendee.preparation}}</td>
+            </tr>
+            <tr>
+                <td class="center">Side: {{attendee.side}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <a href="/companies/{{companyId}}/sodas/{{soda._id}}/edit">Edit {{soda.name}}</a>
+
+    <form method="POST" action="/companies/{{companyId}}/sodas/{{soda._id}}?_method=DELETE">
+        <button type="submit">Delete This Soda</button>
+    </form>
+</body>

@@ -22,6 +22,7 @@ router.get('/new', (req, res) => {
 // CREATE
 router.post('/', (req, res) => {
     const newMeatUser = new MeatUser({
+        image: req.body.image,
         name: req.body.name,
         gender: req.body.gender,
         age: req.body.age,
@@ -45,7 +46,7 @@ router.get('/:id', (req, res) => {
     // find a single meat user
     MeatUser.findById(req.params.id).then((attendee) => {
 
-        // render that into a handlebars view and pass the company from our db into hbs
+        // render that into a handlebars view and pass the meast user from our db into hbs
         res.render('user/show', {
             attendee: attendee
         })
