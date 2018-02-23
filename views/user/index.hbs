@@ -4,73 +4,56 @@
 <!-- Navbar goes here -->
 
 <!-- Page Layout here -->
-<div class="row">
 
-    <div class="col s12 m4 l3">
-        <!-- Note that "m4 l3" was added -->
-        <!-- Grey navigation panel
+<body>
+    <div class="container">
+        <!-- Page Content goes here -->
 
-              This content will be:
-          3-columns-wide on large screens,
-          4-columns-wide on medium screens,
-          12-columns-wide on small screens  -->
+
+    <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/bbq.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Curious? Click on image for info!<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">Sign me up!!!</a></p>
+    </div>
+    <div class="card-reveal span.card-title">
+      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
 
     </div>
-    <div class="row">
-        <div class="col s12 m7">
-            <div class="card">
-                <div class="card-image">
-                    <img src="images/bbq.jpg">
-                    <span class="card-title"></span>
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                    <a href="#">Sign me up NOW!!!</a>
-                </div>
-            </div>
-        </div>
+
     </div>
 
+    <table class="centered highlight white">
+        <thead>
+            <tr>
+                <th>Name:</th>
+                <th>Gender:</th>
+                <th>Meat:</th>
+            </tr>
+        </thead>
 
+        <tbody>
+            {{#each attendee}}
+            <tr>
 
-    <!-- Note that "m8 l9" was added -->
-    <!-- Teal page content
+                <td>
+                    <a href="/users/{{_id}}">{{name}}</a>
+                </td>
+                <td>
+                    {{gender}}
+                </td>
+                <td>
+                    {{meat}}
+                </td>
 
-              This content will be:
-          9-columns-wide on large screens,
-          8-columns-wide on medium screens,
-          12-columns-wide on small screens  -->
-
-</div>
-
-</div>
-
-<table class="highlight">
-    <thead>
-        <tr>
-            <th>Name:</th>
-            <th>Gender:</th>
-            <th>Meat:</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        {{#each attendee}}
-        <tr>
-
-            <td>
-                <a href="/users/{{_id}}" >{{name}}</a>
-            </td>
-            <td>
-                {{gender}}
-            </td>
-            <td>
-                {{meat}}
-            </td>
-
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    </div>
+</body>

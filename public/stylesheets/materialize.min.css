@@ -1,18 +1,29 @@
-h1 {
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 5px black;
-  }
-  
-  header {
+body {
+    background-color: lightblue;
+}
+.card {
+    
+    
+}
+
+header {
     background-image: url("../images/flag.jpg");
     padding: 20px 20px;
     width: 100vw;
     opacity: 0.9;
     margin-bottom: 30px;
-  }
+}
   
-  .card-image {
-    height: 500px;
-  }
-  
+.card-image {
+    height: 100%;
+    width: auto;
+}
+
+h1 {
+    font-family: 'Butcherman', cursive;
+    color: yellow;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    font-size: 72px !important;
+}
+ 
