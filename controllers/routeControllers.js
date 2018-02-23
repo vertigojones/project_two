@@ -55,6 +55,47 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// EDIT
+router.get('/:id/edit', (req, res) => {
+
+    // find a single meat user using the route params above
+    MeatUser.findById(req.params.id).then((attendee) => {
+
+        // render into a handlebars view and pass the meat user from our db into hbs
+        res.render('user/edit', {
+            image: req.body.image,
+            name: req.body.name,
+            gender: req.body.gender,
+            age: req.body.age,
+            hobbies: req.body.hobbies,
+            meat: req.body.meat,
+            preparation: req.body.preparation,
+            side: req.body.side
+        })
+    })
+})
+
+// UPDATE
+router.patch('/:id', (req, res) => {
+
+    // use the route params and form data to update the meat user
+    MeatUser.findByIdAndUpdate(req.params.id, {
+        image: req.body.image,
+            name: req.body.name,
+            gender: req.body.gender,
+            age: req.body.age,
+            hobbies: req.body.hobbies,
+            meat: req.body.meat,
+            preparation: req.body.preparation,
+            side: req.body.side
+    
+        }, { new: true }).then((updatedMeatUser) => {
+
+        // redirect to the show page once it successfully updates
+        res.redirect(`/users/${updatedMeatUser._id}`)
+    })
+})
+
 // DELETE
 router.delete('/:id', (req, res) => {
 

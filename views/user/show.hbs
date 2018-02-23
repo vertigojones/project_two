@@ -39,7 +39,10 @@
     </table>
 
 
-    <a href="/users/{{MeatUserId}}/edit">Edit {{soda.name}}</a>
+    <div class="center-align">
+        <a class="waves-effect waves-light btn amber lighten-2" href="/users/{{attendee.id}}/edit"><i class="material-icons left">autorenew</i>Change {{attendee.name}}</a>
+    </div>
+
 
     <form method="POST" action="/users/{{attendee.id}}?_method=DELETE">
         <div class="center-align">
