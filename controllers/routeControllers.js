@@ -34,9 +34,11 @@ router.post('/', (req, res) => {
 
     // save the new meat user
     newMeatUser.save().then((savedMeatUser) => {
-
+        console.log(savedMeatUser)
         // redirect to the new meat user page
-        res.redirect(`/user/${savedMeatUser._id}`)
+        res.redirect(`/users/${savedMeatUser._id}`)
+    }).catch((err)=> {
+        console.log(err)
     })
 })
 
