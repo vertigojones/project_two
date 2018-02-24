@@ -21,8 +21,8 @@ const murph = new MeatUser({
     gender: 'Male',
     age: 25,
     hobbies: 'Watching the Dawgs, cooking and eating meat, hiking',
-    meat: 'Grilled chicken',
-    preparation: 'Rosemary and garlic',
+    meat: 'Chicken',
+    preparation: 'Breast: Coated with rosemary and garlic',
     side: 'none'
 })
 
@@ -32,8 +32,8 @@ const cameron = new MeatUser({
     gender: 'Male',
     age: 25,
     hobbies: 'Playing guitar, drinking, causing general debauchery',
-    meat: 'Chicken Kabobs',
-    preparation: 'Marinaded in lemon juice, corriander, mint, and black pepper',
+    meat: 'Tuna',
+    preparation: 'Steak: Marinaded in lemon juice, corriander, mint, and black pepper',
     side: 'none'
 })
 
@@ -43,8 +43,8 @@ const sweety = new MeatUser({
     gender: 'Female',
     age: 32,
     hobbies: 'Singing, dancing, being a muppet',
-    meat: 'Lamb chops',
-    preparation: 'Dusted with mint and sprinkled with lime juice',
+    meat: 'Lamb',
+    preparation: 'Chop: Dusted with mint and sprinkled with lime juice',
     side: 'none'
 })
 
@@ -54,13 +54,49 @@ const farrukh = new MeatUser({
     gender: 'Male',
     age: 28,
     hobbies: 'Football (soccer), Martial Arts, Formula One',
-    meat: 'Sirlion steak',
-    preparation: 'Just as is',
+    meat: 'Beef',
+    preparation: 'Sirloin steakmove: Just as is',
     side: 'none'
 })
 
-// remove all MeatUsers and save them to database
-MeatUser.remove().then(() => {
+const chicken = new Meat({
+    image: "/images/Meat.gif",
+    name: 'Chicken',
+    species: 'Fowl', 
+    class: 'Gallus gallus domesticus',
+    type: 'White meat'
+})
+
+const tuna = new Meat({
+    image: "/images/Meat.gif",
+    name: 'Tuna',
+    species: 'Fish',
+    class: 'Thunnini',
+    type: 'White meat'
+})
+
+const lamb = new Meat({
+    image: "/images/Meat.gif",
+    name: 'Lamb',
+    species: 'Bovidae',
+    class: 'Ovis aries',
+    type: 'Red meat'
+})
+
+const beef = new Meat({
+    image: "/images/Meat.gif",
+    name: 'Beef',
+    species: 'Bovinae',
+    class: 'Bos taurus',
+    type: 'Red meat'
+})
+
+// remove all Meats
+Meat.remove().then(() => { 
+
+// then remove all MeatUsers and save them to database
+return MeatUser.remove()
+}).then(() => {
   return MeatUser.insertMany([ murph, cameron, sweety, farrukh ])
 }).then(() => {
   // close the database

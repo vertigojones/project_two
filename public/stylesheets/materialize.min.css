@@ -19,6 +19,10 @@ tbody {
     text-align: center;
 }
 
+.center-align {
+    padding: 15px 0px;
+}
+
 .profile {
     display: block;
     margin-left: auto;

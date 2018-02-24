@@ -8,7 +8,7 @@ const meatUserSchema = new Schema ({
     gender: String,
     age: Number,
     hobbies: String,
-    meat: String,
+    meat: [ meatSchema ],
     preparation: String,
     side: String
 })
