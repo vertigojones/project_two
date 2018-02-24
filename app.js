@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
-const index = require('./models/item')
+const index = require('./controllers/index')
 const meatController = require('./controllers/meatController')
 const userController = require('./controllers/userController')
 

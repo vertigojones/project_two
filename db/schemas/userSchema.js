@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+const meatSchema = require('./meatSchema')
 mongoose.Promise = global.Promise
 
 const meatUserSchema = new Schema ({

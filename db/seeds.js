@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 // import models
 const MeatUser = require('../models/user')
+const Meat = require('../models/meat')
 
 // enable mongoose
 mongoose.connect(process.env.MONGODB_URI)
