@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
     MeatUser.findById(req.params.userId).then((attendee) => {
 
         // pass all meats and meat users to a view specifically for showing all meats
-        const meats = attendee.meats
-        res.render('meats/index', {
+        const meats = attendee.meat
+        res.render('meat/index', {
             attendee: attendee,
             meats: meats
         })
@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 router.get('/new', (req, res) => {
 
     // pass the meat user id to this new view
-    res.render('meats/new', {
+    res.render('meat/new', {
         userId: req.params.userId
     })
 })
@@ -50,10 +50,9 @@ router.post('/', (req, res) => {
     }).then((updatedMeatUser) => {
 
         // redirect to all meats
-        res.redirect(`/users/${req.params.userId}/meats`)
+        res.redirect(`/users/${req.params.userId}/meat`)
     })
 })
-
 
 // SHOW
 router.get('/:id', (req, res) => {
@@ -65,7 +64,7 @@ router.get('/:id', (req, res) => {
         const meat = attendee.meats.id(req.params.id)
 
         // connect it to a soda/show view
-        res.render('meats/show', {
+        res.render('meat/show', {
             userId: req.params.userId,
             meat: meat
         })
@@ -78,7 +77,7 @@ router.get('/:id/edit', (req, res) => {
     // 
     MeatUser.findById(req.params.userId).then((attendee) => {
         const meat = attendee.meats.id(req.params.id)
-        res.render('meats/edit', {
+        res.render('meat/edit', {
             userId: req.params.userId,
             meat: meat
         })
@@ -99,7 +98,7 @@ router.patch('/:id', (req, res) => {
         // then save the meat user
         return attendee.save()
     }).then((updatedMeatUser) => {
-        res.redirect(`/users/${updatedMeatUser._id}/meats/${req.params.id}`)
+        res.redirect(`/users/${updatedMeatUser._id}/meat/${req.params.id}`)
     })
 })
 
@@ -110,7 +109,7 @@ router.delete('/:id', (req, res) => {
         meat.remove()
         return attendee.save()
     }).then(() => {
-        res.redirect(`/users/${req.params.userId}/meats`)
+        res.redirect(`/users/${req.params.userId}/meat`)
     })
 })
 
