@@ -15,6 +15,39 @@ db.on('error', (err) => {
     console.log(err)
 })
 
+// set up the new Meats
+const chicken = new Meat({
+    image: "/images/Meat.gif",
+    name: 'Chicken',
+    species: 'Fowl', 
+    class: 'Gallus gallus domesticus',
+    type: 'White meat'
+})
+
+const tuna = new Meat({
+    image: "/images/Meat.gif",
+    name: 'Tuna',
+    species: 'Fish',
+    class: 'Thunnini',
+    type: 'White meat'
+})
+
+const lamb = new Meat({
+    image: "/images/Meat.gif",
+    name: 'Lamb',
+    species: 'Bovidae',
+    class: 'Ovis aries',
+    type: 'Red meat'
+})
+
+const beef = new Meat({
+    image: "/images/Meat.gif",
+    name: 'Beef',
+    species: 'Bovinae',
+    class: 'Bos taurus',
+    type: 'Red meat'
+})
+
 // set up new MeatUsers
 const murph = new MeatUser({
     image: "https://scontent-ort2-1.xx.fbcdn.net/v/t31.0-8/26961716_10213935554650393_6166632945641644111_o.jpg?oh=8024a2fcdce57e782aab63eb95ca3d41&oe=5AFFA89A",
@@ -58,38 +91,6 @@ const farrukh = new MeatUser({
     meat: 'Beef',
     preparation: 'Sirloin steakmove: Just as is',
     side: 'none'
-})
-
-const chicken = new Meat({
-    image: "/images/Meat.gif",
-    name: 'Chicken',
-    species: 'Fowl', 
-    class: 'Gallus gallus domesticus',
-    type: 'White meat'
-})
-
-const tuna = new Meat({
-    image: "/images/Meat.gif",
-    name: 'Tuna',
-    species: 'Fish',
-    class: 'Thunnini',
-    type: 'White meat'
-})
-
-const lamb = new Meat({
-    image: "/images/Meat.gif",
-    name: 'Lamb',
-    species: 'Bovidae',
-    class: 'Ovis aries',
-    type: 'Red meat'
-})
-
-const beef = new Meat({
-    image: "/images/Meat.gif",
-    name: 'Beef',
-    species: 'Bovinae',
-    class: 'Bos taurus',
-    type: 'Red meat'
 })
 
 // remove all Meats

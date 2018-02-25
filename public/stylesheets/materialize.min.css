@@ -10,9 +10,13 @@ header {
     margin-bottom: 30px;
 }
 
-tbody {
+tbody, p {
     font-family: 'Permanent Marker', cursive;
     font-size: 18px;
+}
+
+.text {
+    text-shadow: 1px 1px 3px white;
 }
 
 .center {
@@ -48,3 +52,5 @@ h2 {
     font-size: 52px !important;
     padding-top: 25px;
 }
+
+
