@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
             image: req.body.image,
             name: req.body.name,
             species: req.body.species,
-            class: req.body.class,
+            classification: req.body.class,
             type: req.body.type
         })
 
@@ -80,38 +80,37 @@ router.get('/:id/edit', (req, res) => {
         const meat = attendee.meats.id(req.params.id)
         res.render('meats/edit', {
             userId: req.params.userId,
-            soda: soda
+            meat: meat
         })
     })
 })
 
 // UPDATE
 router.patch('/:id', (req, res) => {
-    Company.findById(req.params.companyId).then((company) => {
+    MeatUser.findById(req.params.userId).then((attendee) => {
 
-        // We don't have a nice method like findByIdAndUpdate here
-        // so instead we need to manually change the sodas values
-        const soda = company.sodas.id(req.params.id)
-        soda.name = req.body.name
-        soda.price = req.body.price
-        soda.packaging = req.body.packaging
-        soda.quantitySold = req.body.quantitySold
+        const meat = attendee.meats.id(req.params.id)
+            image = req.body.image,
+            name = req.body.name,
+            species = req.body.species,
+            classification = req.body.class,
+            type = req.body.type
 
-        // Then Save the company
-        return company.save()
-    }).then((updatedCompany) => {
-        res.redirect(`/companies/${updatedCompany._id}/sodas/${req.params.id}`)
+        // then save the meat user
+        return attendee.save()
+    }).then((updatedMeatUser) => {
+        res.redirect(`/users/${updatedMeatUser._id}/meats/${req.params.id}`)
     })
 })
 
 // DELETE
 router.delete('/:id', (req, res) => {
-    Company.findById(req.params.companyId).then((company) => {
-        const soda = company.sodas.id(req.params.id)
-        soda.remove()
-        return company.save()
+    MeatUser.findById(req.params.userId).then((attendee) => {
+        const meat = attendee.meats.id(req.params.id)
+        meat.remove()
+        return attendee.save()
     }).then(() => {
-        res.redirect(`/companies/${req.params.companyId}/sodas`)
+        res.redirect(`/users/${req.params.userId}/meats`)
     })
 })
 

@@ -6,7 +6,7 @@ const meatSchema = new Schema ({
     image: String,
     name: String,
     species: String,
-    class: String,
+    classification: String,
     type: String
 })
 

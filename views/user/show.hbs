@@ -5,7 +5,7 @@
 
     <h2>{{attendee.name}}</h2>
 
-    <img class="profile" src="{{attendee.image}}">
+    <img class="profile" src="{{attendee.image}}" />
 
     <table class="centred white">
         <thead>
@@ -40,14 +40,15 @@
 
 
     <div class="center-align">
-        <a class="waves-effect waves-light btn amber lighten-2" href="/users/{{attendee.id}}/edit"><i class="material-icons left">autorenew</i>Change {{attendee.name}}</a>
+        <a class="waves-effect waves-light btn amber lighten-2" href="/users/{{attendee.id}}/edit">
+            <i class="material-icons left">autorenew</i>Change {{attendee.name}}</a>
     </div>
 
 
     <form method="POST" action="/users/{{attendee.id}}?_method=DELETE">
         <div class="center-align">
-            <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action">Delete {{attendee.name}}
-                <i class="material-icons left">clear</i>
+            <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" />Delete {{attendee.name}}
+            <i class="material-icons left">clear</i>
             </button>
         </div>
     </form>
