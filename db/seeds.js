@@ -20,7 +20,7 @@ const chicken = new Meat({
     image: "/images/Meat.gif",
     name: 'Chicken',
     species: 'Fowl', 
-    class: 'Gallus gallus domesticus',
+    classification: 'Gallus gallus domesticus',
     type: 'White meat'
 })
 
@@ -28,7 +28,7 @@ const tuna = new Meat({
     image: "/images/Meat.gif",
     name: 'Tuna',
     species: 'Fish',
-    class: 'Thunnini',
+    classification: 'Thunnini',
     type: 'White meat'
 })
 
@@ -36,7 +36,7 @@ const lamb = new Meat({
     image: "/images/Meat.gif",
     name: 'Lamb',
     species: 'Bovidae',
-    class: 'Ovis aries',
+    classification: 'Ovis aries',
     type: 'Red meat'
 })
 
@@ -44,7 +44,7 @@ const beef = new Meat({
     image: "/images/Meat.gif",
     name: 'Beef',
     species: 'Bovinae',
-    class: 'Bos taurus',
+    classification: 'Bos taurus',
     type: 'Red meat'
 })
 
@@ -55,8 +55,8 @@ const murph = new MeatUser({
     gender: 'Male',
     age: 25,
     hobbies: 'Watching the Dawgs, cooking and eating meat, hiking',
-    meat: 'Chicken',
-    preparation: 'Breast: Coated with rosemary and garlic',
+    meat: [ chicken ],
+    preparation: 'Chicken breast: Coated with rosemary and garlic',
     side: 'none'
 })
 
@@ -66,8 +66,8 @@ const cameron = new MeatUser({
     gender: 'Male',
     age: 25,
     hobbies: 'Playing guitar, drinking, causing general debauchery',
-    meat: 'Tuna',
-    preparation: 'Steak: Marinaded in lemon juice, corriander, mint, and black pepper',
+    meat: [ tuna ],
+    preparation: 'Tuna steak: Marinaded in lemon juice, corriander, mint, and black pepper',
     side: 'none'
 })
 
@@ -77,8 +77,8 @@ const sweety = new MeatUser({
     gender: 'Female',
     age: 32,
     hobbies: 'Singing, dancing, being a muppet',
-    meat: 'Lamb',
-    preparation: 'Chop: Dusted with mint and sprinkled with lime juice',
+    meat: [ lamb ],
+    preparation: 'Lamb chop: Dusted with mint and sprinkled with lime juice',
     side: 'none'
 })
 
@@ -88,8 +88,8 @@ const farrukh = new MeatUser({
     gender: 'Male',
     age: 28,
     hobbies: 'Football (soccer), Martial Arts, Formula One',
-    meat: 'Beef',
-    preparation: 'Sirloin steakmove: Just as is',
+    meat: [ beef ],
+    preparation: 'Sirloin steak: Just as is',
     side: 'none'
 })
 
@@ -102,7 +102,7 @@ return MeatUser.remove()
   return MeatUser.insertMany([ murph, cameron, sweety, farrukh ])
 }).then(() => {
   // close the database
-  console.log('Saved Successfully')
+  console.log('Meats ahoy!')
   db.close()
 }).catch((err) => {
   // if there are any errors, log it and then close the db

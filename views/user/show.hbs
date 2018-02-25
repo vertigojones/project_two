@@ -27,7 +27,9 @@
                 <td class="center">Hobbies: {{attendee.hobbies}}</td>
             </tr>
             <tr>
-                <td class="center">Meat: {{attendee.meat}}</td>
+                {{#each attendee.meat}}
+                <td class="center">Meat: {{name}}</td>
+                {{/each}}
             </tr>
             <tr>
                 <td class="center">Preparation: {{attendee.preparation}}</td>

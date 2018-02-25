@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
     // get all meat users
     MeatUser.find().then((attendee) => {
         // send all meat users to homepage
-        console.log('working!')
         res.render('user/index', {
             attendee: attendee
         })

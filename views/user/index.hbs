@@ -15,12 +15,10 @@
                 <img class="activator" src="/images/bbq.jpg" />
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4" />The grill neads your meat!!!
+                <span class="card-title activator grey-text text-darken-4" />The special grill needs your meat!!!
                 <i class="material-icons right" />more_vert</i>
                 </span>
-                <p>
-                    <a href="/users/new">I WANT TO BRING MY MEAT</a>
-                </p>
+                
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4" />Card Title
@@ -52,9 +50,11 @@
                 <td>
                     {{gender}}
                 </td>
+                {{#each meat}}
                 <td>
-                    {{meat}}
+                    {{name}}
                 </td>
+                {{/each}}
             </tr>
             {{/each}}
         </tbody>

@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 // NEW
 router.get('/new', (req, res) => {
 
-    // pass the meat user ID to this new view
+    // pass the meat user id to this new view
     res.render('meats/new', {
         userId: req.params.userId
     })
