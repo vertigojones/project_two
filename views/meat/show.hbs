@@ -1,0 +1,81 @@
+<header>
+    <h1>We Gots The Meats!</h1>
+</header>
+
+<div id="button-pad">
+    <div class="center-align">
+        <a class="waves-effect waves-light btn teal lighten-1" href="/users">
+            <i class="material-icons left">home</i>Take me home (country roads)</a>
+    </div>
+</div>
+
+<h2>Meat Item</h2>
+
+<body>
+    <div class="container">
+        <!-- Page Content goes here -->
+
+
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="/images/meat.gif" />
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4" />Here's what's sizzling on the grill already ...
+                <i class="material-icons right" />more_vert</i>
+                </span>
+
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4" />Card Title
+                <i class="material-icons right" />close</i>
+                </span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <table class="centered highlight white">
+        
+        <tbody>
+            {{#each attendee.meat}}
+            <tr>
+                <td class="center">Name: {{name}}</td>
+            </tr>
+            <tr>
+                <td class="center">Species: {{species}}</td>
+            </tr>
+
+            <tr>
+                <td class="center">Classification: {{classification}}</td>
+            </tr>
+
+            <tr>
+                <td class="center">Type: {{type}}</td>
+            </tr>
+            {{/each}}
+
+            <tr>
+                <td class="center">Preparation: {{attendee.preparation}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+    <div class="center-align">
+        <a class="waves-effect waves-light btn amber lighten-2" href="/users/{{attendee.id}}/meats/edit">
+            <i class="material-icons left">autorenew</i>Change meat</a>
+    </div>
+
+
+    <form method="POST" action="/users/meat/{{meat.id}}?_method=DELETE">
+        <div class="center-align">
+            <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" />Delete meat
+            <i class="material-icons left">clear</i>
+            </button>
+        </div>
+    </form>
+</body>
