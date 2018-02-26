@@ -43,7 +43,7 @@ router.post('/', (req, res) => {
         })
 
         // push Meat to attendee.meats
-        attendee.meats.push(newMeat)
+        attendee.meat.push(newMeat)
 
         // save MeatUser
         return attendee.save()
@@ -61,7 +61,7 @@ router.get('/:id', (req, res) => {
     MeatUser.findById(req.params.userId).then((attendee) => {
 
         // Use the .id method to extract a single meat from attendee.meats
-        const meat = attendee.meats.id(req.params.id)
+        const meat = attendee.meat.id(req.params.id)
 
         // connect it to a soda/show view
         res.render('meat/show', {
@@ -76,7 +76,7 @@ router.get('/:id/edit', (req, res) => {
 
     // 
     MeatUser.findById(req.params.userId).then((attendee) => {
-        const meat = attendee.meats.id(req.params.id)
+        const meat = attendee.meat.id(req.params.id)
         res.render('meat/edit', {
             userId: req.params.userId,
             meat: meat
@@ -88,7 +88,7 @@ router.get('/:id/edit', (req, res) => {
 router.patch('/:id', (req, res) => {
     MeatUser.findById(req.params.userId).then((attendee) => {
 
-        const meat = attendee.meats.id(req.params.id)
+        const meat = attendee.meat.id(req.params.id)
             image = req.body.image,
             name = req.body.name,
             species = req.body.species,
@@ -105,7 +105,7 @@ router.patch('/:id', (req, res) => {
 // DELETE
 router.delete('/:id', (req, res) => {
     MeatUser.findById(req.params.userId).then((attendee) => {
-        const meat = attendee.meats.id(req.params.id)
+        const meat = attendee.meat.id(req.params.id)
         meat.remove()
         return attendee.save()
     }).then(() => {

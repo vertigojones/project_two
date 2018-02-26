@@ -50,11 +50,11 @@
                 <td>
                     {{gender}}
                 </td>
-                {{#each meat}}
+               
                 <td>
-                    <a href="/users/{{_id}}/meats/" />{{name}}</a>
+                    <a href="/users/{{_id}}/meats/" />{{#each meat}}{{name}}{{/each}}</a>
                 </td>
-                {{/each}}
+            
             </tr>
             {{/each}}
         </tbody>
