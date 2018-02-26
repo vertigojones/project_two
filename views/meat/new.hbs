@@ -1,0 +1,60 @@
+<header>
+    <h1>Murph's Meat-Up™</h1>
+</header>
+
+<h2>New Meat</h2>
+
+<body>
+    <div class="container">
+        <!-- Page Content goes here -->
+
+        <div class="row">
+            <form method="POST" action="/users/{{attendee.id}}/meats" class="col s12 white">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="image" type="text" class="validate" name="image" />
+                        <label class="active" for="image">Image URL</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="name" type="text" class="validate" name="name" />
+                        <label class="active" for="name">Name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="species" type="text" class="validate" name="species" />
+                        <label class="active" for="species">Species</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="classification" type="text" class="validate" name="classification" />
+                        <label class="active" for="classification">Classification</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="type" type="text" class="validate" name="type" />
+                        <label class="active" for="type">Type</label>
+                    </div>
+                </div>
+
+                <div class="center-align">
+                    <button class="btn waves-effect waves-light teal lighten-1" type="submit" name="action" />I'm bringing my meat!
+                    <i class="material-icons left">restaurant</i>
+                    </button>
+                </div>
+                </br>
+
+            </form>
+        </div>
+    </div>
+
+
+</body>
