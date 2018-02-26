@@ -56,7 +56,7 @@ const murph = new MeatUser({
     age: 25,
     hobbies: 'Watching the Dawgs, cooking and eating meat, hiking',
     meat: [ chicken ],
-    preparation: 'Chicken breast: Coated with rosemary and garlic',
+    preparation: 'Chicken breast; Coated with rosemary and garlic',
     side: 'none'
 })
 
@@ -67,7 +67,7 @@ const cameron = new MeatUser({
     age: 25,
     hobbies: 'Playing guitar, drinking, causing general debauchery',
     meat: [ tuna ],
-    preparation: 'Tuna steak: Marinaded in lemon juice, corriander, mint, and black pepper',
+    preparation: 'Tuna steak; Marinaded in lemon juice, corriander, mint, and black pepper',
     side: 'none'
 })
 
@@ -78,7 +78,7 @@ const sweety = new MeatUser({
     age: 32,
     hobbies: 'Singing, dancing, being a muppet',
     meat: [ lamb ],
-    preparation: 'Lamb chop: Dusted with mint and sprinkled with lime juice',
+    preparation: 'Lamb chop; Dusted with mint and sprinkled with lime juice',
     side: 'none'
 })
 
@@ -89,7 +89,7 @@ const farrukh = new MeatUser({
     age: 28,
     hobbies: 'Football (soccer), Martial Arts, Formula One',
     meat: [ beef ],
-    preparation: 'Sirloin steak: Just as is',
+    preparation: 'Sirloin steak; Just as is',
     side: 'none'
 })
 

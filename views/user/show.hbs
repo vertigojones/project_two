@@ -28,7 +28,9 @@
             </tr>
             <tr>
                 {{#each attendee.meat}}
-                <td class="center">Meat: {{name}}</td>
+                <td class="center">Meat:
+                <a href="/users/{{_id}}/meats/" /> {{name}}</a>
+                </td>
                 {{/each}}
             </tr>
             <tr>
