@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
     }).then((updatedMeatUser) => {
 
         // redirect to all meats
-        res.redirect(`/users/${req.params.userId}/meat`)
+        res.redirect(`/users/${req.params.userId}/meats`)
     })
 })
 
