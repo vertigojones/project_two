@@ -10,6 +10,17 @@ header {
     margin-bottom: 30px;
 }
 
+footer {
+    text-transform: uppercase;
+    text-align: center;
+	padding: 10px 10px;
+	background-color: black;
+	color: white;
+	letter-spacing: .08em;
+    font-weight: 500;
+    width: 100vw;
+}
+
 tbody, p {
     font-family: 'Permanent Marker', cursive;
     font-size: 18px;

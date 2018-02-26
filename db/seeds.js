@@ -17,7 +17,7 @@ db.on('error', (err) => {
 
 // set up the new Meats
 const chicken = new Meat({
-    image: "/images/Meat.gif",
+    image: "/images/chicken.jpg",
     name: 'Chicken',
     species: 'Fowl', 
     classification: 'Gallus gallus domesticus',
@@ -25,7 +25,7 @@ const chicken = new Meat({
 })
 
 const tuna = new Meat({
-    image: "/images/Meat.gif",
+    image: "/images/tuna.jpeg",
     name: 'Tuna',
     species: 'Fish',
     classification: 'Thunnini',
@@ -33,7 +33,7 @@ const tuna = new Meat({
 })
 
 const lamb = new Meat({
-    image: "/images/Meat.gif",
+    image: "/images/lamb.jpg",
     name: 'Lamb',
     species: 'Bovidae',
     classification: 'Ovis aries',
@@ -41,7 +41,7 @@ const lamb = new Meat({
 })
 
 const beef = new Meat({
-    image: "/images/Meat.gif",
+    image: "/images/steak.jpg",
     name: 'Beef',
     species: 'Bovinae',
     classification: 'Bos taurus',

@@ -89,16 +89,17 @@ router.patch('/:id', (req, res) => {
     MeatUser.findById(req.params.userId).then((attendee) => {
 
         const meat = attendee.meat.id(req.params.id)
-            image = req.body.image,
-            name = req.body.name,
-            species = req.body.species,
-            classification = req.body.class,
-            type = req.body.type
+            meat.image = req.body.image,
+            meat.name = req.body.name,
+            meat.species = req.body.species,
+            meat.classification = req.body.class,
+            meat.type = req.body.type
 
         // then save the meat user
+        console.log(meat)
         return attendee.save()
     }).then((updatedMeatUser) => {
-        res.redirect(`/users/${updatedMeatUser._id}/meat/${req.params.id}`)
+        res.redirect(`/users/${req.params.userId}/meats/${req.params.id}`)
     })
 })
 

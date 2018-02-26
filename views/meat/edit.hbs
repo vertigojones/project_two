@@ -1,8 +1,8 @@
-<body>
-    <header>
-        <h1>We Gots The Meats!</h1>
-    </header>
+<header>
+    <h1>We Gots The Meats!</h1>
+</header>
 
+<body>
     <div id="button-pad">
         <div class="center-align">
             <a class="waves-effect waves-light btn teal lighten-1" href="/users">
@@ -10,6 +10,52 @@
         </div>
     </div>
 
-    <h2>Edit {{attendee.name}}'s Meat</h2>
+    <h2>Beat The Meat!</h2>
 
     <div class="container">
+        <div class="row">
+            <form method="POST" action="/users/{{userId}}/meats/{{meat._id}}?_method=PATCH" class="col s12 white">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="image" type="text" class="validate" value="{{meat.image}}" name="image" />
+                        <label class="active" for="image">Image URL</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="name" type="text" class="validate" value="{{meat.name}}" name="name" />
+                        <label class="active" for="name">Name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="species" type="text" class="validate" value="{{meat.species}}" name="species" />
+                        <label class="active" for="species">Species</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="classification" type="text" class="validate" value="{{meat.classification}}" name="classification" />
+                        <label class="active" for="classification">Classification</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="type" type="text" class="validate" value="{{meat.type}}" name="type" />
+                        <label class="active" for="type">Type</label>
+                    </div>
+                </div>
+                <div class="center-align">
+                    <button class="btn waves-effect waves-light amber lighten-2" type="submit" name="action">I'm changing my meat!
+                        <i class="material-icons left">restaurant</i>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
