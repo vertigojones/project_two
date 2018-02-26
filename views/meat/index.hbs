@@ -2,6 +2,13 @@
     <h1>We Gots The Meats!</h1>
 </header>
 
+<div id="button-pad">
+    <div class="center-align">
+        <a class="waves-effect waves-light btn teal lighten-1" href="/users">
+            <i class="material-icons left">home</i>Take me home (country roads)</a>
+    </div>
+</div>
+
 <body>
     <div class="container">
         <!-- Page Content goes here -->
@@ -39,32 +46,32 @@
         </thead>
 
         <tbody>
-            {{#each attendee.meat}}            
-                <tr>
-                    <td class="center">Name: {{name}}</td>
-                </tr>
-                <tr>
-                    <td class="center">Species: {{species}}</td>
-                </tr>
+            {{#each attendee.meat}}
+            <tr>
+                <td class="center">Name: {{name}}</td>
+            </tr>
+            <tr>
+                <td class="center">Species: {{species}}</td>
+            </tr>
 
-                <tr>
-                    <td class="center">Classification: {{classification}}</td>
-                </tr>
+            <tr>
+                <td class="center">Classification: {{classification}}</td>
+            </tr>
 
-                <tr>
-                    <td class="center">Type: {{type}}</td>
-                </tr>          
+            <tr>
+                <td class="center">Type: {{type}}</td>
+            </tr>
             {{/each}}
 
             <tr>
                 <td class="center">Preparation: {{attendee.preparation}}</td>
             </tr>
-           
+
         </tbody>
     </table>
     </div>
     <div class="center-align">
-        <a class="waves-effect waves-light btn amber lighten-2" href="/users/meats/{{meat.id}}/edit">
+        <a class="waves-effect waves-light btn amber lighten-2" href="/users/{{attendee.id}}/meats/edit">
             <i class="material-icons left">autorenew</i>Change meat</a>
     </div>
 

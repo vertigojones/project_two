@@ -63,7 +63,7 @@ router.get('/:id', (req, res) => {
         // Use the .id method to extract a single meat from attendee.meats
         const meat = attendee.meat.id(req.params.id)
 
-        // connect it to a soda/show view
+        // connect it to a meat/show view
         res.render('meat/show', {
             userId: req.params.userId,
             meat: meat
@@ -77,7 +77,7 @@ router.get('/:id/edit', (req, res) => {
     // 
     MeatUser.findById(req.params.userId).then((attendee) => {
         const meat = attendee.meat.id(req.params.id)
-        res.render('meat/edit', {
+        res.render('meats/edit', {
             userId: req.params.userId,
             meat: meat
         })

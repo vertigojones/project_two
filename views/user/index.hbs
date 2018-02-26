@@ -18,7 +18,7 @@
                 <span class="card-title activator grey-text text-darken-4" />The special grill needs your meat ...
                 <i class="material-icons right" />more_vert</i>
                 </span>
-                
+
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4" />Card Title
@@ -50,11 +50,11 @@
                 <td>
                     {{gender}}
                 </td>
-               
+
                 <td>
-                    <a href="/users/{{_id}}/meats/" />{{#each meat}}{{name}}{{/each}}</a>
+                    <a href="/users/{{_id}}/meats/" />{{#each meat}}{{name}} {{/each}}</a>
                 </td>
-            
+
             </tr>
             {{/each}}
         </tbody>
