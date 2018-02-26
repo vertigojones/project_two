@@ -77,7 +77,7 @@ router.get('/:id/edit', (req, res) => {
     // 
     MeatUser.findById(req.params.userId).then((attendee) => {
         const meat = attendee.meat.id(req.params.id)
-        res.render('meats/edit', {
+        res.render('meat/edit', {
             userId: req.params.userId,
             meat: meat
         })
@@ -109,7 +109,7 @@ router.delete('/:id', (req, res) => {
         meat.remove()
         return attendee.save()
     }).then(() => {
-        res.redirect(`/users/${req.params.userId}/meat`)
+        res.redirect(`/users/${req.params.userId}/meats`)
     })
 })
 

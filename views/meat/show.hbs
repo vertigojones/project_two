@@ -36,42 +36,39 @@
 
     </div>
 
-    </div>
+
 
     <table class="centered highlight white">
-        
+
         <tbody>
-            {{#each attendee.meat}}
+            
             <tr>
-                <td class="center">Name: {{name}}</td>
+                
+                <td class="center">Name: {{meat.name}}</td>
+                
             </tr>
             <tr>
-                <td class="center">Species: {{species}}</td>
-            </tr>
-
-            <tr>
-                <td class="center">Classification: {{classification}}</td>
+                <td class="center">Species: {{meat.species}}</td>
             </tr>
 
             <tr>
-                <td class="center">Type: {{type}}</td>
+                <td class="center">Classification: {{meat.classification}}</td>
             </tr>
-            {{/each}}
 
             <tr>
-                <td class="center">Preparation: {{attendee.preparation}}</td>
+                <td class="center">Type: {{meat.type}}</td>
             </tr>
-
+     
         </tbody>
     </table>
-    </div>
+
     <div class="center-align">
-        <a class="waves-effect waves-light btn amber lighten-2" href="/users/{{attendee.id}}/meats/edit">
+        <a class="waves-effect waves-light btn amber lighten-2" href="/users/{{userId}}/meats/{{meat.id}}/edit">
             <i class="material-icons left">autorenew</i>Change meat</a>
     </div>
 
 
-    <form method="POST" action="/users/meat/{{meat.id}}?_method=DELETE">
+    <form method="POST" action="/users/{{userId}}/meats/{{meat.id}}?_method=DELETE">
         <div class="center-align">
             <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" />Delete meat
             <i class="material-icons left">clear</i>
