@@ -24,3 +24,6 @@ https://i.imgur.com/1UblMW4.jpg?1
 Things still to fix:
 Card size - make smaller.
 Fully responsive (user page).
+
+Things to note:
+The "side" input in form (new and update) is purposely disabled as a joke.
