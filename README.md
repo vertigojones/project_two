@@ -24,4 +24,3 @@ https://i.imgur.com/1UblMW4.jpg?1
 Things still to fix:
 Card size - make smaller.
 Fully responsive (user page).
-Add preparation to meat items.
