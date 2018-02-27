@@ -23,3 +23,4 @@ https://i.imgur.com/1UblMW4.jpg?1
 
 Things still to fix:
 Meat board for each user - not displaying meats seperately on table.
+Card size - too big.
