@@ -44,21 +44,24 @@
                 </tr>
             </thead>
             {{#each attendee}}
+            {{#each meat}}
             <tr>
+
                 <td>
-                    {{#each meat}}
-                        <a href="/users/{{../_id}}/meats/{{_id}}" >{{name}}</a>
-                    {{/each}}</a>
+                    
+                    <a href="/users/{{../_id}}/meats/{{_id}}" >{{name}}</a>
+                    
                 </td>
                 <td>
-                    {{#each meat}}{{species}}{{/each}}
+                   {{species}}
                 </td>
 
                 <td>
-                    {{#each meat}}{{type}}{{/each}}
+                    {{type}}
                 </td>
 
             </tr>
+            {{/each}}
             {{/each}}
         </tbody>
     </table>
