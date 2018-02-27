@@ -66,7 +66,8 @@ router.get('/:id', (req, res) => {
         // connect it to a meat/show view
         res.render('meat/show', {
             userId: req.params.userId,
-            meat: meat
+            meat: meat,
+            attendee: attendee
         })
     })
 })
