@@ -27,3 +27,4 @@ Fully responsive (user page).
 
 Things to note:
 The "side" input in form (new and update) is purposely disabled as a joke.
+When user is updated, meats disappear.
