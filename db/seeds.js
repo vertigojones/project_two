@@ -72,7 +72,7 @@ const cameron = new MeatUser({
 })
 
 const sweety = new MeatUser({
-    image: "https://media.licdn.com/media/AAIA_wDGAAAAAQAAAAAAAA3cAAAAJDgyYjMxMTRlLTMyNGEtNGUzZS04ZDMwLTc2NTYxZmQ4ODhmYg.jpg",
+    image: "https://scontent.fatl1-2.fna.fbcdn.net/v/t1.0-9/29594444_10155516780749150_3475845098780500393_n.jpg?_nc_cat=0&oh=e1f3b7507135a30d4594d07176000d62&oe=5B9C714E",
     name: 'Sweety James',
     gender: 'Female',
     age: 32,
